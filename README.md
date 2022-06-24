@@ -2,14 +2,22 @@ https://webframe.app/docs
 
 ## Deployment
 
-First, setup `.npmrc` with this content:
+First, run this command to find out where npm expects to have auth token:
+
+```
+npm config ls -l
+# then look for
+# userconfig = "/Users/<user>/.npmrc" 
+```
+
+Second, setup `.npmrc` with this content:
 
 ```
 //registry.npmjs.org/:_authToken=<your_npm_publish_token>
 ```
 
-Then, to deploy a package (Table, for example), run:
+Third, to deploy, run:
 
 ```shell
-pnpm push table
+npm run push
 ```
