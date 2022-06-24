@@ -20,5 +20,8 @@
   ],
   "scripts": {
     "push": "npm publish --access public"
+  },
+  "dependencies": {
+    "utils-pack": "0.11.5"
   }
 }
